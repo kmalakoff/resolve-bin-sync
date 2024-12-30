@@ -40,7 +40,6 @@
   ],
   "scripts": {
     "build": "tsds build",
-    "depcheck": "depcheck",
     "deploy": "tsds deploy",
     "format": "biome check --write --unsafe src/ test/",
     "test": "tsds test:node --no-timeouts",
