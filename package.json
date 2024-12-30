@@ -1,0 +1,68 @@
+{
+  "name": "resolve-bin-sync",
+  "version": "0.0.0",
+  "description": "Resolves the bin path for a module",
+  "keywords": [
+    "resolve",
+    "bin",
+    "resolve-bin",
+    "sync"
+  ],
+  "homepage": "https://github.com/kmalakoff/resolve-bin-sync#README.md",
+  "bugs": {
+    "url": "https://github.com/kmalakoff/resolve-bin-sync/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kmalakoff/resolve-bin-sync.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Kevin Malakoff",
+    "email": "kmalakoff@gmail.com",
+    "url": "https://github.com/kmalakoff"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "main": "dist/cjs/index.js",
+  "unpkg": "dist/umd/index-of-newline.js",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsds build",
+    "depcheck": "depcheck",
+    "deploy": "tsds deploy",
+    "format": "biome check --write --unsafe src/ test/",
+    "test": "tsds test:node --no-timeouts",
+    "test:engines": "nvu engines tsds test:node --no-timeouts",
+    "version": "tsds version"
+  },
+  "dependencies": {
+    "resolve": "^1.22.10"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.2"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "tsds": {
+    "source": "src/index.ts",
+    "targets": [
+      "cjs",
+      "esm"
+    ]
+  }
+}

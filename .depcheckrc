@@ -1,0 +1,1 @@
+ignores: ["resolve-bin-sync", "@types/*", "@biomejs/*"]
