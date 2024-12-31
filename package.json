@@ -26,13 +26,13 @@
   "exports": {
     ".": {
       "import": "./dist/esm/index.mjs",
-      "require": "./dist/cjs/index.js",
+      "require": "./dist/cjs/index.cjs",
       "types": "./dist/types/index.d.ts"
     },
     "./*": "./*"
   },
-  "main": "dist/cjs/index.js",
-  "unpkg": "dist/umd/index-of-newline.js",
+  "main": "dist/cjs/index.cjs",
+  "unpkg": "dist/umd/index-of-newline.cjs",
   "module": "dist/esm/index.mjs",
   "types": "dist/types/index.d.ts",
   "files": [
