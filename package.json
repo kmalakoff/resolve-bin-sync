@@ -1,6 +1,6 @@
 {
   "name": "resolve-bin-sync",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Resolves the bin path for a module",
   "keywords": [
     "resolve",
@@ -26,13 +26,13 @@
   "exports": {
     ".": {
       "import": "./dist/esm/index.mjs",
-      "require": "./dist/cjs/index.js",
+      "require": "./dist/cjs/index.cjs",
       "types": "./dist/types/index.d.ts"
     },
     "./*": "./*"
   },
-  "main": "dist/cjs/index.js",
-  "unpkg": "dist/umd/index-of-newline.js",
+  "main": "dist/cjs/index.cjs",
+  "unpkg": "dist/umd/index-of-newline.cjs",
   "module": "dist/esm/index.mjs",
   "types": "dist/types/index.d.ts",
   "files": [
@@ -40,8 +40,8 @@
   ],
   "scripts": {
     "build": "tsds build",
-    "depcheck": "depcheck",
     "deploy": "tsds deploy",
+    "docs": "tsds docs",
     "format": "biome check --write --unsafe src/ test/",
     "test": "tsds test:node --no-timeouts",
     "test:engines": "nvu engines tsds test:node --no-timeouts",
@@ -53,7 +53,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^22.10.2"
+    "@types/node": "^22.10.5"
   },
   "engines": {
     "node": ">=0.8"
