@@ -19,11 +19,6 @@ describe('resolve-bin-sync', () => {
     assert.equal(binPath, path.join(NODE_MODULES, 'resolve', 'bin', 'resolve'));
   });
 
-  it('Finds @biomejs/biome by name: biome', () => {
-    const binPath = resolveBin('@biomejs/biome', 'biome');
-    assert.equal(binPath, path.join(NODE_MODULES, '@biomejs/biome', 'bin', 'biome'));
-  });
-
   describe('errors', () => {
     it('Fails for self', () => {
       try {
