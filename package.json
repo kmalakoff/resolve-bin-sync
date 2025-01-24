@@ -1,6 +1,6 @@
 {
   "name": "resolve-bin-sync",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Resolves the bin path for a module",
   "keywords": [
     "resolve",
