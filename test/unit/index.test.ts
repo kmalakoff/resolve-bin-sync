@@ -1,9 +1,8 @@
 import assert from 'assert';
 import path from 'path';
-import url from 'url';
-
 // @ts-ignore
 import resolveBin from 'resolve-bin-sync';
+import url from 'url';
 
 const __dirname = path.dirname(typeof __filename !== 'undefined' ? __filename : url.fileURLToPath(import.meta.url));
 const NODE_MODULES = path.join(__dirname, '..', '..', 'node_modules');
