@@ -1,11 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import resolve from 'resolve';
+import * as resolve from 'resolve';
+
+const resolveSync = resolve.default?.sync || resolve.sync;
 
 export default function resolveBin(moduleName: string, binName?: string): string {
   if (!moduleName) throw new Error('resolve-bind-sync missing moduleName');
 
-  const packagePath = resolve.sync(`${moduleName}/package.json`);
+  const packagePath = resolveSync(`${moduleName}/package.json`);
   const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
   if (typeof pkg.bin === 'undefined') throw new Error(`resolve-bind-sync missing bin for ${moduleName}`);
 
