@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import * as resolve from 'resolve';
 
-const resolveSync = resolve.default?.sync || resolve.sync;
+const resolveSync = (resolve.default ?? resolve).sync;
 
 export default function resolveBin(moduleName: string, binName?: string): string {
   if (!moduleName) throw new Error('resolve-bind-sync missing moduleName');
