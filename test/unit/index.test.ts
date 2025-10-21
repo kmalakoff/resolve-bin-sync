@@ -1,6 +1,5 @@
 import assert from 'assert';
 import path from 'path';
-// @ts-ignore
 import resolveBin from 'resolve-bin-sync';
 import url from 'url';
 
