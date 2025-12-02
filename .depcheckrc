@@ -1,1 +1,1 @@
-ignores: ["resolve-bin-sync"]
+ignores: ["node-version-use", "ts-dev-stack", "@biomejs/biome", "resolve-bin-sync"]
