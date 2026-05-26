@@ -50,6 +50,7 @@
   "devDependencies": {
     "@types/mocha": "*",
     "@types/node": "*",
+    "@types/resolve": "^1.20.6",
     "node-version-use": "*",
     "ts-dev-stack": "*",
     "tsds-config": "*"
