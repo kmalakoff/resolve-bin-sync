@@ -1,1 +1,1 @@
-ignores: ["node-version-use", "ts-dev-stack", "resolve-bin-sync"]
+ignores: ["resolve-bin-sync", "node-version-use", "ts-dev-stack"]
